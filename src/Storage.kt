@@ -4,7 +4,7 @@ object Storage {
     public val problems : MutableMap<Int, Problem> = mutableMapOf()
 
     private fun getUnusedId() : Int {
-        for (i in 0..1000000) {
+        for (i in 0..Integer.MAX_VALUE) {
             if (!problems.containsKey(i)) return i
         }
         return -1
